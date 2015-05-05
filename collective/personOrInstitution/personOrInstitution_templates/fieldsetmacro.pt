@@ -1,0 +1,77 @@
+<!-- Secondary fieldsets -->
+  
+<div metal:define-macro="test">
+
+  <tal:name_information tal:condition='python: fieldset_text == "name_information"'
+    tal:define='widgets group/widgets'>
+    <!-- Name information -->
+    <div class="row no-padding">
+        <h2 class="page-header" i18n:translate="">Name</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/nameInformation_name_name/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/nameInformation_name_institutionNumber/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/nameInformation_name_nameType/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/nameInformation_name_nameNotes/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="Relation with other names"></h2>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_use/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_usedFor/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_equivalent/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="Address details"></h2>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/nameInformation_addressDetails/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="Telephone/fax/email"></h2>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_telephoneFaxEmail_telephone/@@ploneform-render-widget"/>
+        </div>
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_telephoneFaxEmail_fax/@@ploneform-render-widget"/>
+        </div>
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_telephoneFaxEmail_email/@@ploneform-render-widget"/>
+        </div>
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_telephoneFaxEmail_website/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="Contacts"></h2>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/nameInformation_contacts/@@ploneform-render-widget"/>
+        </div>
+        
+        <h2 class="page-header" i18n:translate="Miscellaneous"></h2>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_miscellaneous_group/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/nameInformation_miscellaneous_notes/@@ploneform-render-widget"/>
+        </div>
+    </div>
+  </tal:name_information>
+  
+</div>

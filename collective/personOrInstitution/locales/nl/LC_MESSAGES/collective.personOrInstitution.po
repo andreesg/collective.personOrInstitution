@@ -1,0 +1,1479 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.treatment\n"
+"POT-Creation-Date: 2015-04-09 15:28+0000\n"
+"PO-Revision-Date: 2015-04-10 15:29+0000’\n"
+"Last-Translator: INTK <info@intk.com>\n"
+"Language-Team: Dutch <info@intk.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: collective.treatment\n"
+
+#: ../profiles/default/types/Object.xml:7
+msgid "Object"
+msgstr "Objecten"
+
+#: ../profiles/default/types/Object.xml:8
+msgid "Information about an object typically collected by museums"
+msgstr "Informatie over een object meestal verzameld door musea"
+
+#: ../personOrInstitution.py
+msgid "Body"
+msgstr "Tekst"
+
+#: ../personOrInstitution.py
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../personOrInstitution.py
+msgid "Identification"
+msgstr "Identificatie"
+
+#: ../personOrInstitution.py
+msgid "Institution name"
+msgstr "Instellingnaam"
+
+#: ../personOrInstitution.py
+msgid "Administrative name"
+msgstr "Afdeling"
+
+#: ../personOrInstitution.py
+msgid "Collection"
+msgstr "Collectie"
+
+#: ../personOrInstitution.py
+msgid "Object number"
+msgstr "Objectnummer"
+
+#: ../personOrInstitution.py
+msgid "Rec. type"
+msgstr "Rec. type"
+
+#: ../personOrInstitution.py
+msgid "Part"
+msgstr "Onderdeel"
+
+#: ../personOrInstitution.py
+msgid "Tot. Number"
+msgstr "Aantal"
+
+#: ../personOrInstitution.py
+msgid "Copy number"
+msgstr "Serienummer"
+
+#: ../personOrInstitution.py
+msgid "Edition"
+msgstr "Oplage"
+
+#: ../personOrInstitution.py
+msgid "Distinguish features"
+msgstr "Ondersch. kenmerken"
+
+#: ../personOrInstitution.py
+msgid "Object Category"
+msgstr "Objectcategorie"
+
+#: ../personOrInstitution.py
+msgid "Object name"
+msgstr "Objectnaam"
+
+#: ../personOrInstitution.py
+msgid "Other name"
+msgstr "Ander benaming"
+
+#: ../personOrInstitution.py
+msgid "Physical Characteristics"
+msgstr "Fysieke kenmerken"
+
+#: ../personOrInstitution.py
+msgid "Physical Description"
+msgstr "Fysieke beschrijving"
+
+#: ../personOrInstitution.py
+msgid "Keywords"
+msgstr "Trefwoorden"
+
+#: ../personOrInstitution.py
+msgid "Part"
+msgstr "Onderdeel"
+
+#: ../personOrInstitution.py
+msgid "Aspect"
+msgstr "Aspect"
+
+#: ../personOrInstitution.py
+msgid "Keyword"
+msgstr "Trefwoord"
+
+#: ../personOrInstitution.py
+msgid "Notes"
+msgstr "Bijzonderheden"
+
+#: ../personOrInstitution.py
+msgid "Techniques"
+msgstr "Technieken"
+
+#: ../personOrInstitution.py
+msgid "Technique"
+msgstr "Techniek"
+
+#: ../personOrInstitution.py
+msgid "Materials"
+msgstr "Materialen"
+
+#: ../personOrInstitution.py
+msgid "Material"
+msgstr "Materiaal"
+
+#: ../personOrInstitution.py
+msgid "Dimensions"
+msgstr "Afmetingen"
+
+#: ../personOrInstitution.py
+msgid "Dimention"
+msgstr "Afmeting"
+
+#: ../personOrInstitution.py
+msgid "Value"
+msgstr "Waarde"
+
+#: ../personOrInstitution.py
+msgid "Unit"
+msgstr "Eenh"
+
+#: ../personOrInstitution.py
+msgid "Precision"
+msgstr "Precisie"
+
+#: ../personOrInstitution.py
+msgid "Dimensions (free text)"
+msgstr "Afmeting (vrije tekst)"
+
+#: ../personOrInstitution.py
+msgid "Frame"
+msgstr "Omlijsting"
+
+#: ../personOrInstitution.py
+msgid "Detail"
+msgstr "Bijzonderheden"
+
+#: ../personOrInstitution.py
+msgid "Production & Dating"
+msgstr "Vervaardiging & Datering"
+
+#: ../personOrInstitution.py
+msgid "Creator"
+msgstr "Vervaardiger"
+
+#: ../personOrInstitution.py
+msgid "Maker"
+msgstr "Vervaardiger"
+
+#: ../personOrInstitution.py
+msgid "Qualifier"
+msgstr "Kwalificatie"
+
+#: ../personOrInstitution.py
+msgid "Role"
+msgstr "Rol"
+
+#: ../personOrInstitution.py
+msgid "Place"
+msgstr "Plaats"
+
+#: ../personOrInstitution.py
+msgid "School / style"
+msgstr "School / stijl"
+
+#: ../personOrInstitution.py
+msgid "Production notes"
+msgstr "Bijzonderheden"
+
+#: ../personOrInstitution.py
+msgid "Production reason"
+msgstr "Reden vervaardiging"
+
+#: ../personOrInstitution.py
+msgid "Dating"
+msgstr "Datering"
+
+#: ../personOrInstitution.py
+msgid "Period"
+msgstr "Periode"
+
+#: ../personOrInstitution.py
+msgid "Date (early)"
+msgstr "Datering van"
+
+#: ../personOrInstitution.py
+msgid "Precision"
+msgstr "Precisie"
+
+#: ../personOrInstitution.py
+msgid "Date (late)"
+msgstr "Tot"
+
+#
+# Condition & Conservation
+#
+
+#: ../personOrInstitution.py
+msgid "Condition & Conservation"
+msgstr "Toestand & Conservering"
+
+#: ../personOrInstitution.py
+msgid "Conservation treatment"
+msgstr "Conserveringsprioriteit"
+
+#: ../personOrInstitution.py
+msgid "Priority"
+msgstr "Prioriteit"
+
+#: ../personOrInstitution.py
+msgid "Next condition check"
+msgstr "Volgende toets en controle"
+
+#: ../personOrInstitution.py
+msgid "Date"
+msgstr "Datum"
+
+#: ../personOrInstitution.py
+msgid "Completeness"
+msgstr "Compleetheid"
+
+#: ../personOrInstitution.py
+msgid "Checked by"
+msgstr "Controleur"
+
+#: ../personOrInstitution.py
+msgid "Condition"
+msgstr "Toestand"
+
+#: ../personOrInstitution.py
+msgid "Condition"
+msgstr "Toestand"
+
+#: ../personOrInstitution.py
+msgid "Enviromental condition"
+msgstr "Bewaarvorm"
+
+#: ../personOrInstitution.py
+msgid "Preservation form"
+msgstr "Bewaarvorm"
+
+#: ../personOrInstitution.py
+msgid "Conservation request"
+msgstr "Conserveringverzoeken"
+
+#: ../personOrInstitution.py
+msgid "Treatment"
+msgstr "Behandeling"
+
+#: ../personOrInstitution.py
+msgid "Requester"
+msgstr "Aanvrager"
+
+#: ../personOrInstitution.py
+msgid "Reason"
+msgstr "Reden"
+
+#: ../personOrInstitution.py
+msgid "Status"
+msgstr "Status"
+
+#: ../personOrInstitution.py
+msgid "low"
+msgstr "laag"
+
+#: ../personOrInstitution.py
+msgid "medium"
+msgstr "normal"
+
+#: ../personOrInstitution.py
+msgid "high"
+msgstr "hoog"
+
+#: ../personOrInstitution.py
+msgid "urgent"
+msgstr "urgent"
+
+#
+# Inscriptions and markings
+#
+
+#: ../personOrInstitution.py
+msgid "Inscriptions and markings"
+msgstr "Opschrijven en merken"
+
+#: ../personOrInstitution.py
+msgid "Type"
+msgstr "Soort"
+
+#: ../personOrInstitution.py
+msgid "Position"
+msgstr "Positie"
+
+#: ../personOrInstitution.py
+msgid "Method"
+msgstr "Methode"
+
+#: ../personOrInstitution.py
+msgid "Date"
+msgstr "Datum"
+
+#: ../personOrInstitution.py
+msgid "Role"
+msgstr "Rol"
+
+#: ../personOrInstitution.py
+msgid "Content"
+msgstr "Inhoud"
+
+#: ../personOrInstitution.py
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../personOrInstitution.py
+msgid "Interpretation"
+msgstr "Interpretatie"
+
+#: ../personOrInstitution.py
+msgid "Language"
+msgstr "Taal"
+
+#: ../personOrInstitution.py
+msgid "Notes"
+msgstr "Bijzonderheden"
+
+#
+# Value & Insurance
+#
+
+#: ../personOrInstitution.py
+msgid "Value & Insurance"
+msgstr "Waarde"
+
+#: ../personOrInstitution.py
+msgid "Valuation"
+msgstr "Waardebepaling"
+
+#: ../personOrInstitution.py
+msgid "Value"
+msgstr "Waarde"
+
+#: ../personOrInstitution.py
+msgid "Curr."
+msgstr "Val."
+
+#: ../personOrInstitution.py
+msgid "Valuer"
+msgstr "Taxateur"
+
+#: ../personOrInstitution.py
+msgid "Insurance"
+msgstr "Verzekering"
+
+#: ../personOrInstitution.py
+msgid "Commercial"
+msgstr "commercieel"
+
+#: ../personOrInstitution.py
+msgid "Indemnity"
+msgstr "indemniteit"
+
+#: ../personOrInstitution.py
+msgid "Policy number"
+msgstr "Polisnummer"
+
+#: ../personOrInstitution.py
+msgid "Insurance company"
+msgstr "Verzekeringsmaatschappij"
+
+#: ../personOrInstitution.py
+msgid "Confirmation date"
+msgstr "Bevestigingsdatum"
+
+#: ../personOrInstitution.py
+msgid "Renewal date"
+msgstr "Verloopdatum"
+
+#: ../personOrInstitution.py
+msgid "Reference"
+msgstr "Referentie"
+
+#: ../personOrInstitution.py
+msgid "Conditions"
+msgstr "Voorwaarden"
+
+#
+# Acquisition
+#
+
+#: ../personOrInstitution.py
+msgid "Acquisition"
+msgstr "Verwerving"
+
+#: ../personOrInstitution.py
+msgid "Accession"
+msgstr "Inschrijving"
+
+#: ../personOrInstitution.py
+msgid "Accession date"
+msgstr "Inschrijvingsdatum"
+
+#: ../personOrInstitution.py
+msgid "Acquisition"
+msgstr "Verwerving"
+
+#: ../personOrInstitution.py
+msgid "Acquisition number"
+msgstr "Verwervingsnummer"
+
+#: ../personOrInstitution.py
+msgid "Acquisition number"
+msgstr "Verwervingsnummer"
+
+#: ../personOrInstitution.py
+msgid "Method"
+msgstr "Methode"
+
+#: ../personOrInstitution.py
+msgid "Rec.no."
+msgstr "Rec.nr."
+
+#: ../personOrInstitution.py
+msgid "Lot no."
+msgstr "Lotnr."
+
+#: ../personOrInstitution.py
+msgid "From"
+msgstr "Van"
+
+#: ../personOrInstitution.py
+msgid "Auction"
+msgstr "Veiling"
+
+#: ../personOrInstitution.py
+msgid "Place"
+msgstr "Plaats"
+
+#: ../personOrInstitution.py
+msgid "Reason"
+msgstr "Reden"
+
+#: ../personOrInstitution.py
+msgid "Conditions"
+msgstr "Voorwaarden"
+
+#: ../personOrInstitution.py
+msgid "Authorization"
+msgstr "Autorisatie"
+
+#: ../personOrInstitution.py
+msgid "Authorizer"
+msgstr "Autorisator"
+
+#: ../personOrInstitution.py
+msgid "Costs"
+msgstr "Kosten"
+
+#: ../personOrInstitution.py
+msgid "Offer price"
+msgstr "Vraagprijs"
+
+#: ../personOrInstitution.py
+msgid "Curr."
+msgstr "Valuta"
+
+#: ../personOrInstitution.py
+msgid "Purchase price"
+msgstr "Aankoopprijs"
+
+#: ../personOrInstitution.py
+msgid "Funding"
+msgstr "Financiering"
+
+#: ../personOrInstitution.py
+msgid "Amount"
+msgstr "Bedrag"
+
+#: ../personOrInstitution.py
+msgid "Source"
+msgstr "Bron"
+
+#: ../personOrInstitution.py
+msgid "Provisos"
+msgstr "Bepalingen"
+
+#: ../personOrInstitution.py
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: ../personOrInstitution.py
+msgid "Reference"
+msgstr "Referentie"
+
+#
+# Disposal
+#
+
+#: ../personOrInstitution.py
+msgid "Disposal"
+msgstr "Afstoting"
+
+#: ../personOrInstitution.py
+msgid "Deaccession"
+msgstr "Uitschrijving"
+
+#: ../personOrInstitution.py
+msgid "Deaccession date"
+msgstr "Uitschrijvingsdatum"
+
+#: ../personOrInstitution.py
+msgid "New object number"
+msgstr "Nieuw objectnummer"
+
+#: ../personOrInstitution.py
+msgid "Disposal"
+msgstr "Afstoting"
+
+#: ../personOrInstitution.py
+msgid "Disposal number"
+msgstr "Afstotingsnummer"
+
+#: ../personOrInstitution.py
+msgid "Proposed recipient"
+msgstr "Aspirant-ontvanger"
+
+#: ../personOrInstitution.py
+msgid "Recipient"
+msgstr "Ontvanger"
+
+#: ../personOrInstitution.py
+msgid "Reason"
+msgstr "Reden"
+
+#: ../personOrInstitution.py
+msgid "Provisos"
+msgstr "Voorwaarden"
+
+#: ../personOrInstitution.py
+msgid "Finance"
+msgstr "Financiën"
+
+#: ../personOrInstitution.py
+msgid "Disposal price"
+msgstr "Verkoopprijs"
+
+#
+# Ownership history
+#
+
+#: ../personOrInstitution.py
+msgid "Ownership history"
+msgstr "Eigendomsgeschiedenis"
+
+#: ../personOrInstitution.py
+msgid "Ownership"
+msgstr "Eigendom"
+
+#: ../personOrInstitution.py
+msgid "Current Owner"
+msgstr "Huidige eigenaar"
+
+#: ../personOrInstitution.py
+msgid "History"
+msgstr "Geschiedenis"
+
+#: ../personOrInstitution.py
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: ../personOrInstitution.py
+msgid "From"
+msgstr "Vanaf"
+
+#: ../personOrInstitution.py
+msgid "Until"
+msgstr "Tot"
+
+#: ../personOrInstitution.py
+msgid "Exchange method"
+msgstr "Verwervingsmethode"
+
+#: ../personOrInstitution.py
+msgid "Acquired from"
+msgstr "Verworven van"
+
+#: ../personOrInstitution.py
+msgid "Auction"
+msgstr "Veiling"
+
+#: ../personOrInstitution.py
+msgid "Price"
+msgstr "Prijs"
+
+#: ../personOrInstitution.py
+msgid "Ownership category"
+msgstr "Eigendomscategorie"
+
+#: ../personOrInstitution.py
+msgid "Access"
+msgstr "Toegankelijkheid"
+
+#
+# Location
+#
+
+#: ../personOrInstitution.py
+msgid "Location"
+msgstr "Standplaats"
+
+#: ../personOrInstitution.py
+msgid "Normal location"
+msgstr "Vaste standplaats"
+
+#: ../personOrInstitution.py
+msgid "Current location"
+msgstr "Huidige locatie"
+
+#: ../personOrInstitution.py
+msgid "Start date"
+msgstr "Begindatum"
+
+#: ../personOrInstitution.py
+msgid "End date"
+msgstr "Einddatum"
+
+#: ../personOrInstitution.py
+msgid "Location type"
+msgstr "Soort standplaats"
+
+#: ../personOrInstitution.py
+msgid "Location"
+msgstr "Standplaats"
+
+#: ../personOrInstitution.py
+msgid "Fitness"
+msgstr "Geschiktheid"
+
+#: ../personOrInstitution.py
+msgid "Location checks"
+msgstr "Standplaatscontroles"
+
+#
+# Notes
+#
+
+#: ../personOrInstitution.py
+msgid "Free Fields"
+msgstr "Vrij Velden"
+
+#: ../personOrInstitution.py
+msgid "Confidential"
+msgstr "Vertrouwelijk"
+
+#
+# Labels
+#
+
+#: ../personOrInstitution.py
+msgid "Labels"
+msgstr "Etiketten"
+
+# Identification
+
+#: ../personOrInstitution.py
+msgid "Translated title"
+msgstr "Vertaalde titel"
+
+#: ../personOrInstitution.py
+msgid "Describer"
+msgstr "Beschrijver"
+
+#: ../personOrInstitution.py
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: ../personOrInstitution.py
+msgid "Taxonomy rank"
+msgstr "Taxonomie rang"
+
+#: ../personOrInstitution.py
+msgid "Scient. name"
+msgstr "Wet. naam"
+
+#: ../personOrInstitution.py
+msgid "Common name"
+msgstr "Populaire naam"
+
+#: ../personOrInstitution.py
+msgid "Determiner"
+msgstr "Determinator"
+
+#: ../personOrInstitution.py
+msgid "Object status"
+msgstr "Objectstatus"
+
+#: ../personOrInstitution.py
+msgid "Title and description"
+msgstr "Titel en beschrijving"
+
+
+#: ../personOrInstitution.py
+msgid "Title and description"
+msgstr "Titel en beschrijving"
+
+#
+# Iconography
+#
+
+#: ../personOrInstitution.py
+msgid "General theme"
+msgstr "Hoofdmotief algemeen"
+
+#: ../personOrInstitution.py
+msgid "Specific theme"
+msgstr "Hoofdmotief specifiek"
+
+#: ../personOrInstitution.py
+msgid "Classification theme"
+msgstr "Classificatieschema"
+
+#: ../personOrInstitution.py
+msgid "Code"
+msgstr "Code"
+
+#: ../personOrInstitution.py
+msgid "General search criteria"
+msgstr "Algemene onderwerpsontsluiting"
+
+#: ../personOrInstitution.py
+msgid "Content description"
+msgstr "Inhoudsbeschrijving"
+
+#: ../personOrInstitution.py
+msgid "Content person/institution"
+msgstr "Afgebeelde persoon/instelling"
+
+#: ../personOrInstitution.py
+msgid "Name type"
+msgstr "Soort naam"
+
+#: ../personOrInstitution.py
+msgid "Content subject"
+msgstr "Afgebeeld onderwerp"
+
+#: ../personOrInstitution.py
+msgid "Subject type"
+msgstr "Soort onderwerp"
+
+#: ../personOrInstitution.py
+msgid "Subject"
+msgstr "Naam"
+
+#: ../personOrInstitution.py
+msgid "Taxonomic rank"
+msgstr "Taxonomische rang"
+
+#: ../personOrInstitution.py
+msgid "Scientific name"
+msgstr "Wet. Naam"
+
+#: ../personOrInstitution.py
+msgid "Proper name"
+msgstr "Eigennaam"
+
+#: ../personOrInstitution.py
+msgid "Identifier"
+msgstr "Identifier"
+
+#: ../personOrInstitution.py
+msgid "Content period/date"
+msgstr "Content period/date"
+
+#: ../personOrInstitution.py
+msgid "Iconography source"
+msgstr "Iconografisch bron"
+
+#: ../personOrInstitution.py
+msgid "Source general"
+msgstr "Bron algemeen"
+
+#: ../personOrInstitution.py
+msgid "Source specific"
+msgstr "Bron specifiek"
+
+#: ../personOrInstitution.py
+msgid "Source object number"
+msgstr "Bron objectnummer"
+
+#: ../personOrInstitution.py
+msgid "Iconography"
+msgstr "Iconografie"
+
+#: ../personOrInstitution.py
+msgid "Content period/date"
+msgstr "Afgebeelde periode/datum"
+
+#
+# Inscriptions
+#
+
+#: ../personOrInstitution.py
+msgid "Script"
+msgstr "Schrijt"
+
+#: ../personOrInstitution.py
+msgid "Transliteration"
+msgstr "Transliteratie"
+
+
+#
+# Associations
+#
+
+#: ../personOrInstitution.py
+msgid "Associated person/institution"
+msgstr "Geassocieerde persoon/instelling"
+
+#: ../personOrInstitution.py
+msgid "Association"
+msgstr "Associatie"
+
+#: ../personOrInstitution.py
+msgid "Associated subject"
+msgstr "Geassocieerd onderwerp"
+
+#: ../personOrInstitution.py
+msgid "Associated period"
+msgstr "Geassocieerde periode"
+
+#: ../personOrInstitution.py
+msgid "Associations"
+msgstr "Associaties"
+
+#
+# Numbers/relationships
+#
+
+#: ../personOrInstitution.py
+msgid "Numbers/relationships"
+msgstr "Nummers/relaties"
+
+#: ../personOrInstitution.py
+msgid "Numbers"
+msgstr "Nummers"
+
+#: ../personOrInstitution.py
+msgid "Institution"
+msgstr "Instelling"
+
+#: ../personOrInstitution.py
+msgid "Number"
+msgstr "Nummer"
+
+#: ../personOrInstitution.py
+msgid "Relationships with other objects"
+msgstr "Relaties met andere objecten"
+
+#: ../personOrInstitution.py
+msgid "Part of"
+msgstr "Is deel van"
+
+#: ../personOrInstitution.py
+msgid "Parts"
+msgstr "Heeft als deel"
+
+#: ../personOrInstitution.py
+msgid "Related object"
+msgstr "Gerelateerd object"
+
+#: ../personOrInstitution.py
+msgid "Digital references"
+msgstr "Digitale referenties"
+
+#: ../personOrInstitution.py
+msgid "Title"
+msgstr "Titel"
+
+#: ../personOrInstitution.py
+msgid "Page mark"
+msgstr "Pagina-aanduiding"
+
+#: ../personOrInstitution.py
+msgid "Author"
+msgstr "Auteur"
+
+#: ../personOrInstitution.py
+msgid "Shelf mark"
+msgstr "Signatuur"
+
+#
+# Documentation (free) / archive
+#
+
+#: ../personOrInstitution.py
+msgid "Documentation (free) / archive"
+msgstr "Documentatie (vrij) / archief"
+
+#: ../personOrInstitution.py
+msgid "Documentation (free text)"
+msgstr "Documentatie (vrij tekst)"
+
+#: ../personOrInstitution.py
+msgid "Archive"
+msgstr "Archief"
+
+#: ../personOrInstitution.py
+msgid "Archive number"
+msgstr "Archiefnummer"
+
+
+#
+# Reproductions
+#
+
+#: ../personOrInstitution.py
+msgid "Reproductions"
+msgstr "Reproducties"
+
+#: ../personOrInstitution.py
+msgid "Reproduction"
+msgstr "Reproductie"
+
+#: ../personOrInstitution.py
+msgid "Reference"
+msgstr "Referentie"
+
+#: ../personOrInstitution.py
+msgid "Format"
+msgstr "Formaat"
+
+#: ../personOrInstitution.py
+msgid "Identifier (URL)"
+msgstr "Identifier (URL)"
+
+#
+# Recommendations/requirements
+#
+
+#: ../personOrInstitution.py
+msgid "Recommendations/requirements"
+msgstr "Aanbevelingen / vereisten"
+
+#: ../personOrInstitution.py
+msgid "Recommendations"
+msgstr "Aanbevelingen"
+
+#: ../personOrInstitution.py
+msgid "Display"
+msgstr "Tentoonstelling"
+
+#: ../personOrInstitution.py
+msgid "Enviroment"
+msgstr "Omgeving"
+
+#: ../personOrInstitution.py
+msgid "Handling"
+msgstr "Behandeling"
+
+#: ../personOrInstitution.py
+msgid "Packing"
+msgstr "Verpakking"
+
+#: ../personOrInstitution.py
+msgid "Security"
+msgstr "Veiligheid"
+
+#: ../personOrInstitution.py
+msgid "Security"
+msgstr "Veiligheid"
+
+#: ../personOrInstitution.py
+msgid "Storage"
+msgstr "Berging"
+
+#: ../personOrInstitution.py
+msgid "Legal / license requirements"
+msgstr "Wettelijke eisen / vergunningen"
+
+#: ../personOrInstitution.py
+msgid "Requirements"
+msgstr "Eisen"
+
+#: ../personOrInstitution.py
+msgid "Requirements held"
+msgstr "Vereisten in Bezit"
+
+#: ../personOrInstitution.py
+msgid "Current From"
+msgstr "Geldig van"
+
+#
+# Field collection
+#
+
+#: ../personOrInstitution.py
+msgid "Field Collection"
+msgstr "Vondstomstandigheden"
+
+#: ../personOrInstitution.py
+msgid "Field coll. number"
+msgstr "Vondstnummer"
+
+#: ../personOrInstitution.py
+msgid "Collector"
+msgstr "Vinder"
+
+#: ../personOrInstitution.py
+msgid "Event"
+msgstr "Gebeurtenis"
+
+#: ../personOrInstitution.py
+msgid "Date (early)"
+msgstr "Begindatum"
+
+
+#: ../personOrInstitution.py
+msgid "Date (late)"
+msgstr "Einddatum"
+
+#: ../personOrInstitution.py
+msgid "Method"
+msgstr "Methode"
+
+#: ../personOrInstitution.py
+msgid "Place"
+msgstr "Vindplaats"
+
+#: ../personOrInstitution.py
+msgid "Place code"
+msgstr "Code vindplaats"
+
+#: ../personOrInstitution.py
+msgid "Place feature"
+msgstr "Kenmerk vindplaats"
+
+#: ../personOrInstitution.py
+msgid "Co-ordinates field collection place"
+msgstr "Coördnaten vindplaats"
+
+#: ../personOrInstitution.py
+msgid "Grid type"
+msgstr "Coördinatenstelsel"
+
+#: ../personOrInstitution.py
+msgid "X co-ordinate"
+msgstr "X-coördnaat"
+
+#: ../personOrInstitution.py
+msgid "Addition"
+msgstr "Toevoeging"
+
+#: ../personOrInstitution.py
+msgid "Y co-ordinate"
+msgstr "Y-coördnaat"
+
+#: ../personOrInstitution.py
+msgid "Habitat and stratigraphy"
+msgstr "Milieu en stratigrafie"
+
+#: ../personOrInstitution.py
+msgid "Habitat"
+msgstr "Landschap/milieu"
+
+#: ../personOrInstitution.py
+msgid "Stratigraphy"
+msgstr "Stratigrafie"
+
+#: ../personOrInstitution.py
+msgid "Strat. type"
+msgstr "Soort strat."
+
+#
+# treatments
+#
+
+#: ../personOrInstitution.py
+msgid "treatments"
+msgstr "Tentoonstellingen"
+
+#: ../personOrInstitution.py
+msgid "treatment"
+msgstr "Tentoonstelling"
+
+
+#: ../personOrInstitution.py
+msgid "treatment name"
+msgstr "Tentoonstellingsnaam"
+
+#: ../personOrInstitution.py
+msgid "to"
+msgstr "t/m"
+
+#: ../personOrInstitution.py
+msgid "Venue"
+msgstr "Locatie"
+
+#: ../personOrInstitution.py
+msgid "Cat. no. object"
+msgstr "Cat.nr. object"
+
+#
+# Loans
+#
+
+#: ../personOrInstitution.py
+msgid "Loans"
+msgstr "Bruiklenen"
+
+#: ../personOrInstitution.py
+msgid "Incoming loans"
+msgstr "Inkomende bruiklenen"
+
+#: ../personOrInstitution.py
+msgid "Outgoing loans"
+msgstr "Uitgaande bruiklenen"
+
+#: ../personOrInstitution.py
+msgid "Loan number"
+msgstr "Bruikleennummer"
+
+#: ../personOrInstitution.py
+msgid "Lender"
+msgstr "Bruikleengever"
+
+#: ../personOrInstitution.py
+msgid "Requester"
+msgstr "Aanvrager"
+
+#: ../personOrInstitution.py
+msgid "Request reason"
+msgstr "Reden aanvraag"
+
+#: ../personOrInstitution.py
+msgid "Request period"
+msgstr "Aaanvraagperiode"
+
+#: ../personOrInstitution.py
+msgid "Contract period"
+msgstr "Contractperiode"
+
+#: ../personOrInstitution.py
+msgid "Contact"
+msgstr "Contactpersoon"
+
+#
+# treatments details
+#
+
+#: ../personOrInstitution.py
+msgid "treatment"
+msgstr "Tentoonstelling"
+
+#: ../personOrInstitution.py
+msgid "Alt. Title"
+msgstr "Alt. Titel"
+
+#: ../personOrInstitution.py
+msgid "Organizing institutions"
+msgstr "Organiserende instelling"
+
+#: ../personOrInstitution.py
+msgid "Name"
+msgstr "Naam"
+
+#: ../personOrInstitution.py
+msgid "Address"
+msgstr "Adres"
+
+#: ../personOrInstitution.py
+msgid "Country"
+msgstr "Land"
+
+#: ../personOrInstitution.py
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: ../personOrInstitution.py
+msgid "treatments details"
+msgstr "Tentoonstelling"
+
+
+#: ../personOrInstitution.py
+msgid "label_event_start"
+msgstr "Aanvang"
+
+#: ../personOrInstitution.py
+msgid "label_event_end"
+msgstr "Einde"
+
+#: ../personOrInstitution.py
+msgid "Article"
+msgstr "Lidword"
+
+#: ../personOrInstitution.py
+msgid "Linked Objects"
+msgstr "Gekoppelde objecten"
+
+#: ../personOrInstitution.py
+msgid "Itinerary"
+msgstr "Agenda"
+
+
+
+#
+# Conservation treatment
+# 
+
+
+#: ../personOrInstitution.py
+msgid "Treatment number"
+msgstr "Behandelingsnummer"
+
+#: ../personOrInstitution.py
+msgid "Treatment type"
+msgstr "Soort Behandeling"
+
+#: ../personOrInstitution.py
+msgid "Reversible"
+msgstr "Reversibel"
+
+#: ../personOrInstitution.py
+msgid "Reversible"
+msgstr "Reversibel"
+
+#: ../personOrInstitution.py
+msgid "conversation"
+msgstr "conservering"
+
+#: ../personOrInstitution.py
+msgid "restauration"
+msgstr "restauratie"
+
+#: ../personOrInstitution.py
+msgid "Treatment method"
+msgstr "Behandelmethode"
+
+#: ../personOrInstitution.py
+msgid "Conservator"
+msgstr "Uitvoerder"
+
+#: ../personOrInstitution.py
+msgid "Material"
+msgstr "Materiall"
+
+#: ../personOrInstitution.py
+msgid "Recall date"
+msgstr "Rappeldatum"
+
+#: ../personOrInstitution.py
+msgid "Progress"
+msgstr "Voortgang"
+
+#: ../personOrInstitution.py
+msgid "Treatment"
+msgstr "Behandeling"
+
+#: ../personOrInstitution.py
+msgid "Condition description"
+msgstr "Toestandsbeschrijving"
+
+#: ../personOrInstitution.py
+msgid "Treatment plan"
+msgstr "Behandelplan"
+
+#: ../personOrInstitution.py
+msgid "Treatment summary"
+msgstr "Behandelingsbeschrijving"
+
+#: ../personOrInstitution.py
+msgid "(Digital) references"
+msgstr "(Digitale) documentatie"
+
+
+#
+# Person or Institution
+#
+
+#: ../personOrInstitution.py
+msgid "Name information"
+msgstr "Naamgegevens"
+
+
+#: ../personOrInstitution.py
+msgid "Institution number"
+msgstr "Museumnummer"
+
+#: ../personOrInstitution.py
+msgid "Name notes"
+msgstr "Opmerking naam"
+
+#: ../personOrInstitution.py
+msgid "Relation with other names"
+msgstr "Relaties met andere namen"
+
+#: ../personOrInstitution.py
+msgid "Use"
+msgstr "Gebruik"
+
+#: ../personOrInstitution.py
+msgid "Used for"
+msgstr "Gebruik voor"
+
+#: ../personOrInstitution.py
+msgid "Equivalent"
+msgstr "Equivalent"
+
+#: ../personOrInstitution.py
+msgid "Address details"
+msgstr "Adresgegevens"
+
+#: ../personOrInstitution.py
+msgid "Address type"
+msgstr "Soort Adres"
+
+#: ../personOrInstitution.py
+msgid "Postal code"
+msgstr "Postcode"
+
+#: ../personOrInstitution.py
+msgid "Place"
+msgstr "Plaats"
+
+#: ../personOrInstitution.py
+msgid "Country"
+msgstr "Land"
+
+#: ../personOrInstitution.py
+msgid "Telephone/fax/email"
+msgstr "Telefoon/fax/email"
+
+#: ../personOrInstitution.py
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: ../personOrInstitution.py
+msgid "Fax"
+msgstr "Fax"
+
+#: ../personOrInstitution.py
+msgid "Email"
+msgstr "Email"
+
+#: ../personOrInstitution.py
+msgid "Website"
+msgstr "Website"
+
+#: ../personOrInstitution.py
+msgid "Contacts"
+msgstr "Contactperson"
+
+#: ../personOrInstitution.py
+msgid "Job title"
+msgstr "Functie"
+
+#: ../personOrInstitution.py
+msgid "Phone"
+msgstr "Telefoon"
+
+#: ../personOrInstitution.py
+msgid "Miscellaneous"
+msgstr "Diversen"
+
+#: ../personOrInstitution.py
+msgid "Group"
+msgstr "Groep"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
