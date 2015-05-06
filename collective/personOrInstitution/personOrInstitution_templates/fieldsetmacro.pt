@@ -73,5 +73,72 @@
         </div>
     </div>
   </tal:name_information>
+
+  <tal:person_details tal:condition='python: fieldset_text == "person_details"'
+    tal:define='widgets group/widgets'>
+    <!-- Name information -->
+    <div class="row no-padding">
+        <h2 class="page-header" i18n:translate="">Person details</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/personDetails_birthDetails_dateStart/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_birthDetails_dateEnd/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_birthDetails_precision/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_birthDetails_place/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_birthDetails_notes/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Death details</h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/personDetails_deathDetails_dateStart/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_deathDetails_dateEnd/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_deathDetails_precision/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_deathDetails_place/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_deathDetails_notes/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Nationality</h2>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_nationality_nationality/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_nationality_language/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="">Occupation</h2>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_ocupation_ocupation/@@ploneform-render-widget"/>
+        </div>
+
+        <div class="form-horizontal gridfield show-label hide-th">
+          <tal:widget tal:replace="structure widgets/personDetails_ocupation_schoolStyle/@@ploneform-render-widget"/>
+        </div>
+
+        <h2 class="page-header" i18n:translate="Place of activity"></h2>
+
+        <div class="form-horizontal gridfield">
+          <tal:widget tal:replace="structure widgets/personDetails_placeOfActivity/@@ploneform-render-widget"/>
+        </div>
+
+
+        <h2 class="page-header" i18n:translate="Biography"></h2>
+
+        <div class="form-horizontal">
+          <tal:widget tal:replace="structure widgets/personDetails_biography/@@ploneform-render-widget"/>
+        </div>        
+    </div>
+  </tal:person_details>
+
+
   
 </div>

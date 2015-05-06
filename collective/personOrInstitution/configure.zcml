@@ -37,7 +37,7 @@
         name="view"
         for="collective.personOrInstitution.personOrInstitution.IPersonOrInstitution"
         class="collective.personOrInstitution.personOrInstitution.PersonOrInstitutionView"
-        template="PersonOrInstitution_templates/view.pt"
+        template="personOrInstitution_templates/view.pt"
         permission="zope2.View"
         />
 

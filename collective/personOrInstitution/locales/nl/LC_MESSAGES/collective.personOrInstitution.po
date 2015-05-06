@@ -1391,12 +1391,49 @@ msgstr "Diversen"
 msgid "Group"
 msgstr "Groep"
 
+#
+# Person details
+#
 
+#: ../personOrInstitution.py
+msgid "Person details"
+msgstr "Biografische Persoonsgegevens"
 
+#: ../personOrInstitution.py
+msgid "Birth details"
+msgstr "Geboortgegevens"
 
+#: ../personOrInstitution.py
+msgid "Date (start)"
+msgstr "Datum (begin)"
 
+#: ../personOrInstitution.py
+msgid "Date (end)"
+msgstr "Datum (eind)"
 
+#: ../personOrInstitution.py
+msgid "Death details"
+msgstr "Death details"
 
+#: ../personOrInstitution.py
+msgid "Nationality"
+msgstr "Nationaliteit"
+
+#: ../personOrInstitution.py
+msgid "Occupation"
+msgstr "Beroep"
+
+#: ../personOrInstitution.py
+msgid "School/style"
+msgstr "School/Stijl"
+
+#: ../personOrInstitution.py
+msgid "Place of activity"
+msgstr "Plaats van Werkzaamheid"
+
+#: ../personOrInstitution.py
+msgid "Biography"
+msgstr "Biografie"
 
 
 

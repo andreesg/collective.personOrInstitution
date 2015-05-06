@@ -159,7 +159,7 @@ class IPersonOrInstitution(form.Schema):
     form.widget(nameInformation_contacts=DataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_contacts')
 
-    # Miscellaneous
+    # Miscellaneous
     nameInformation_miscellaneous_group = ListField(title=_(u'Group'),
         value_type=DictRow(title=_(u'Group'), schema=IGroup),
         required=False)
@@ -171,6 +171,125 @@ class IPersonOrInstitution(form.Schema):
         required=False)
     form.widget(nameInformation_miscellaneous_notes=DataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_miscellaneous_notes')
+
+    # # # # # # # # # # # #
+    # Person details      #
+    # # # # # # # # # # # #
+    model.fieldset('person_details', label=_(u'Person details'), 
+        fields=['personDetails_birthDetails_dateStart' , 'personDetails_birthDetails_dateEnd',
+                'personDetails_birthDetails_precision', 'personDetails_birthDetails_place', 
+                'personDetails_birthDetails_notes', 'personDetails_deathDetails_dateStart',
+                'personDetails_deathDetails_dateEnd', 'personDetails_deathDetails_precision',
+                'personDetails_deathDetails_place', 'personDetails_deathDetails_notes',
+                'personDetails_nationality_nationality', 'personDetails_nationality_language',
+                'personDetails_ocupation_ocupation', 'personDetails_ocupation_schoolStyle',
+                'personDetails_placeOfActivity', 'personDetails_biography']
+    )
+
+    # Birth details
+    personDetails_birthDetails_dateStart = schema.TextLine(
+        title=_(u'Date (start)'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_dateStart')
+
+    personDetails_birthDetails_dateEnd = schema.TextLine(
+        title=_(u'Date (end)'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_dateEnd')
+
+    personDetails_birthDetails_precision = schema.TextLine(
+        title=_(u'Precision'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_precision')
+
+
+    personDetails_birthDetails_place = schema.TextLine(
+        title=_(u'Place'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_place')
+
+    personDetails_birthDetails_notes = ListField(title=_(u'Notes'),
+        value_type=DictRow(title=_(u'Notes'), schema=INotes),
+        required=False)
+    form.widget(personDetails_birthDetails_notes=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_birthDetails_notes')
+
+    # Death details
+    personDetails_deathDetails_dateStart = schema.TextLine(
+        title=_(u'Date (start)'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_dateStart')
+
+    personDetails_deathDetails_dateEnd = schema.TextLine(
+        title=_(u'Date (end)'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_dateEnd')
+
+    personDetails_deathDetails_precision = schema.TextLine(
+        title=_(u'Precision'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_precision')
+
+    personDetails_deathDetails_place = schema.TextLine(
+        title=_(u'Place'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_birthDetails_place')
+
+    personDetails_deathDetails_notes = ListField(title=_(u'Notes'),
+        value_type=DictRow(title=_(u'Notes'), schema=INotes),
+        required=False)
+    form.widget(personDetails_deathDetails_notes=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_deathDetails_notes')
+
+    # Nationality
+    personDetails_nationality_nationality = ListField(title=_(u'Nationality'),
+        value_type=DictRow(title=_(u'Nationality'), schema=INationality),
+        required=False)
+    form.widget(personDetails_nationality_nationality=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_nationality_nationality')
+
+    personDetails_nationality_language = ListField(title=_(u'Language'),
+        value_type=DictRow(title=_(u'Language'), schema=ILanguage),
+        required=False)
+    form.widget(personDetails_nationality_language=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_nationality_language')
+
+    # Ocupation
+    personDetails_ocupation_ocupation = ListField(title=_(u'Occupation'),
+        value_type=DictRow(title=_(u'Occupation'), schema=IOcupation),
+        required=False)
+    form.widget(personDetails_ocupation_ocupation=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_ocupation_ocupation')
+
+    personDetails_ocupation_schoolStyle = ListField(title=_(u'School/style'),
+        value_type=DictRow(title=_(u'School/style'), schema=ISchoolStyle),
+        required=False)
+    form.widget(personDetails_ocupation_schoolStyle=DataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_ocupation_schoolStyle')
+
+    # Place of activity
+    personDetails_placeOfActivity = ListField(title=_(u'Place of activity'),
+        value_type=DictRow(title=_(u'Place of activity'), schema=IPlaceOfActivity),
+        required=False)
+    form.widget(personDetails_placeOfActivity=BlockDataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_placeOfActivity')
+
+    # Biography
+    personDetails_biography = schema.TextLine(
+        title=_(u'Biography'),
+        required=False
+    )
+    dexteritytextindexer.searchable('personDetails_biography')
+
+
 
 
 

@@ -67,3 +67,24 @@ class IGroup(Interface):
 class INotes(Interface):
     note = schema.TextLine(title=_(u'Note'), required=False)
 
+## Person details
+
+class INationality(Interface):
+    nationality = schema.TextLine(title=_(u'Nationality'), required=False)
+
+class ILanguage(Interface):
+    term = schema.TextLine(title=_(u'Language'), required=False)
+
+class IOcupation(Interface):
+    term = schema.TextLine(title=_(u'Occupation'), required=False)
+
+class ISchoolStyle(Interface):
+    term = schema.TextLine(title=_(u'School/style'), required=False)
+
+class IPlaceOfActivity(Interface):
+    place = schema.TextLine(title=_(u'Place'), required=False)
+    dateStart = schema.TextLine(title=_(u'Date (start)'), required=False)
+    dateEnd = schema.TextLine(title=_(u'Date (end)'), required=False)
+    notes = schema.TextLine(title=_(u'Notes'), required=False)
+
+
