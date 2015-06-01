@@ -1303,6 +1303,14 @@ msgstr "(Digitale) documentatie"
 #
 
 #: ../personOrInstitution.py
+msgid "Person or Institution"
+msgstr "Person en instellingen"
+
+#: ../personOrInstitution.py
+msgid "PersonOrInstitution"
+msgstr "Person en instellingen"
+
+#: ../personOrInstitution.py
 msgid "Name information"
 msgstr "Naamgegevens"
 

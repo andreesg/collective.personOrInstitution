@@ -63,6 +63,14 @@ class IPersonOrInstitution(form.Schema):
         required=False
     )
 
+    # priref
+    priref = schema.TextLine(
+        title=_(u'priref'),
+        required=False
+    )
+    dexteritytextindexer.searchable('priref')
+
+
     # # # # # # # # # # # #
     # Name Information    #
     # # # # # # # # # # # #
