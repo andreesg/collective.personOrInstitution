@@ -44,7 +44,7 @@ priority_vocabulary = SimpleVocabulary(list(_createPriorityVocabulary()))
 insurance_type_vocabulary = SimpleVocabulary(list(_createInsuranceTypeVocabulary()))
 PersonOrInstitutiontype_vocabulary = SimpleVocabulary(list(_createPersonOrInstitutionTypeVocabulary()))
 
-NameTypeVocabularyFactory = ATVMVocabulary('NameType')
+NameTypeVocabularyFactory = ATVMVocabulary('PersonNameType')
 
 PlaceVocabularyFactory = ObjectVocabulary('nameInformation_addressDetails_place')
 CountryVocabularyFactory = ObjectVocabulary('nameInformation_addressDetails_country')
