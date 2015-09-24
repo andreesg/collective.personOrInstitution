@@ -95,6 +95,10 @@ class IAddressDetails(Interface):
     )
     form.widget('country', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.country")
 
+
+class IBiography(Interface):
+    biography = schema.Text(title=_(u'Biography'), required=False)
+
 class ITelephone(Interface):
     phone = schema.TextLine(title=_(u'Telephone'), required=False)
 

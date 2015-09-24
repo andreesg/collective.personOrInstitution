@@ -317,10 +317,10 @@ class IPersonOrInstitution(form.Schema):
     dexteritytextindexer.searchable('personDetails_placeOfActivity')
 
     # Biography
-    personDetails_biography = schema.TextLine(
-        title=_(u'Biography'),
-        required=False
-    )
+    personDetails_biography = ListField(title=_(u'Biography'),
+        value_type=DictRow(title=_(u'Biography'), schema=IBiography),
+        required=False)
+    form.widget(personDetails_biography=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('personDetails_biography')
 
 
