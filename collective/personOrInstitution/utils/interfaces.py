@@ -62,7 +62,7 @@ class IUsedFor(Interface):
 
 class IEquivalent(Interface):
     name = RelationList(
-        title=_(u'Use'),
+        title=_(u'Equivalent'),
         default=[],
         missing_value=[],
         value_type=RelationChoice(

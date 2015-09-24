@@ -22,15 +22,15 @@
 
         <h2 class="page-header" i18n:translate="Relation with other names">Relaties met andere namen</h2>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_use/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_usedFor/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_equivalent/@@ploneform-render-widget"/>
         </div>
 
@@ -97,15 +97,15 @@
 
         <h2 class="page-header" i18n:translate="Relation with other names"></h2>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_use/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_usedFor/@@ploneform-render-widget"/>
         </div>
 
-        <div class="form-horizontal gridfield show-label hide-th">
+        <div class="form-horizontal gridfield">
           <tal:widget tal:replace="structure widgets/nameInformation_relationWithOtherNames_equivalent/@@ploneform-render-widget"/>
         </div>
 

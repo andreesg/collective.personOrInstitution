@@ -120,19 +120,19 @@ class IPersonOrInstitution(form.Schema):
     nameInformation_relationWithOtherNames_use = ListField(title=_(u'Use'),
         value_type=DictRow(title=_(u'Use'), schema=IUse),
         required=False)
-    form.widget(nameInformation_relationWithOtherNames_use=DataGridFieldFactory)
+    form.widget(nameInformation_relationWithOtherNames_use=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_use')
 
     nameInformation_relationWithOtherNames_usedFor = ListField(title=_(u'Used for'),
         value_type=DictRow(title=_(u'Used for'), schema=IUsedFor),
         required=False)
-    form.widget(nameInformation_relationWithOtherNames_usedFor=DataGridFieldFactory)
+    form.widget(nameInformation_relationWithOtherNames_usedFor=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_usedFor')
 
     nameInformation_relationWithOtherNames_equivalent = ListField(title=_(u'Equivalent'),
         value_type=DictRow(title=_(u'Equivalent'), schema=IEquivalent),
         required=False)
-    form.widget(nameInformation_relationWithOtherNames_equivalent=DataGridFieldFactory)
+    form.widget(nameInformation_relationWithOtherNames_equivalent=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_equivalent')
 
     # Address details
