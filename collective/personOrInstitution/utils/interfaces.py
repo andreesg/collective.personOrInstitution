@@ -152,8 +152,8 @@ class IPlaceOfActivity(Interface):
         default=[]
     )
     form.widget('place', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.place")
-    dateStart = schema.TextLine(title=_(u'Date (start)'), required=False)
-    dateEnd = schema.TextLine(title=_(u'Date (end)'), required=False)
+    dateStart = schema.TextLine(title=_(u'Start date'), required=False)
+    dateEnd = schema.TextLine(title=_(u'End date'), required=False)
     notes = schema.TextLine(title=_(u'Notes'), required=False)
 
 

@@ -1405,7 +1405,7 @@ msgstr "Groep"
 
 #: ../personOrInstitution.py
 msgid "Person details"
-msgstr "Biografische Persoonsgegevens"
+msgstr "Biografische persoonsgegevens"
 
 #: ../personOrInstitution.py
 msgid "Birth details"
