@@ -3,7 +3,7 @@
 
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 from collective.personOrInstitution import MessageFactory as _
-
+from collective.object.utils.vocabularies import ATVMVocabulary, ObjectVocabulary
 # # # # # # # # # # # # # #
 # Vocabularies            #
 # # # # # # # # # # # # # #
@@ -43,3 +43,11 @@ def _createPriorityVocabulary():
 priority_vocabulary = SimpleVocabulary(list(_createPriorityVocabulary()))
 insurance_type_vocabulary = SimpleVocabulary(list(_createInsuranceTypeVocabulary()))
 PersonOrInstitutiontype_vocabulary = SimpleVocabulary(list(_createPersonOrInstitutionTypeVocabulary()))
+
+NameTypeVocabularyFactory = ATVMVocabulary('NameType')
+
+PlaceVocabularyFactory = ObjectVocabulary('nameInformation_addressDetails_place')
+CountryVocabularyFactory = ObjectVocabulary('nameInformation_addressDetails_country')
+GroupVocabularyFactory = ObjectVocabulary('nameInformation_miscellaneous_group')
+LanguageVocabularyFactory = ObjectVocabulary('personDetails_nationality_language')
+OcupationVocabularyFactory = ObjectVocabulary('personDetails_ocupation_ocupation')

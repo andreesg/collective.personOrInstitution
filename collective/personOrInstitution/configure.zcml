@@ -85,5 +85,38 @@
     />
 
   <!-- -*- extra stuff goes here -*- -->
+  <adapter name="nameInformation_addressDetails_place" factory=".utils.indexers.nameInformation_addressDetails_place" />
+  <adapter name="nameInformation_addressDetails_country" factory=".utils.indexers.nameInformation_addressDetails_country" />
+
+  <utility
+    component=".utils.vocabularies.NameTypeVocabularyFactory"
+    name="collective.personOrInstitution.nametype"
+    />
+
+  <utility
+    component=".utils.vocabularies.PlaceVocabularyFactory"
+    name="collective.personOrInstitution.place"
+    />
+
+  <utility
+    component=".utils.vocabularies.CountryVocabularyFactory"
+    name="collective.personOrInstitution.country"
+    />
+
+  <utility
+    component=".utils.vocabularies.GroupVocabularyFactory"
+    name="collective.personOrInstitution.group"
+    />
+
+  <utility
+    component=".utils.vocabularies.LanguageVocabularyFactory"
+    name="collective.personOrInstitution.language"
+    />
+
+  <utility
+    component=".utils.vocabularies.OcupationVocabularyFactory"
+    name="collective.personOrInstitution.ocupation"
+    />
+
 
 </configure>

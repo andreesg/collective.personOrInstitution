@@ -1421,7 +1421,7 @@ msgstr "Datum (eind)"
 
 #: ../personOrInstitution.py
 msgid "Death details"
-msgstr "Death details"
+msgstr "Overlijdensgegevens"
 
 #: ../personOrInstitution.py
 msgid "Nationality"
@@ -1437,13 +1437,15 @@ msgstr "School/Stijl"
 
 #: ../personOrInstitution.py
 msgid "Place of activity"
-msgstr "Plaats van Werkzaamheid"
+msgstr "Plaats van werkzaamheid"
 
 #: ../personOrInstitution.py
 msgid "Biography"
 msgstr "Biografie"
 
-
+#: ../personOrInstitution.py
+msgid "Website"
+msgstr "World Wide Web"
 
 
 

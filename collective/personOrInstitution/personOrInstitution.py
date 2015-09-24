@@ -42,6 +42,7 @@ from collective import dexteritytextindexer
 from plone.dexterity.browser.view import DefaultView
 from plone.dexterity.content import Container
 from plone.dexterity.browser import add, edit
+from plone.app.widgets.dx import AjaxSelectFieldWidget
 
 # # # # # # # # # # # # # # # # # #
 # !PersonOrInstitution specific imports!   #
@@ -50,6 +51,12 @@ from collective.personOrInstitution import MessageFactory as _
 from .utils.vocabularies import *
 from .utils.interfaces import *
 from .utils.views import *
+
+from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationList
+from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget
+from collective.object.utils.source import ObjPathSourceBinder
+from plone.directives import dexterity, form
 
 # # # # # # # # # # # # #
 # # # # # # # # # # # # #
@@ -103,7 +110,7 @@ class IPersonOrInstitution(form.Schema):
     form.widget(nameInformation_name_nameType=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_name_nameType')
 
-    nameInformation_name_nameNotes = schema.TextLine(
+    nameInformation_name_nameNotes = schema.Text(
         title=_(u'Name notes'),
         required=False
     )
@@ -162,18 +169,21 @@ class IPersonOrInstitution(form.Schema):
     dexteritytextindexer.searchable('nameInformation_telephoneFaxEmail_website')
 
     # Contacts
-    nameInformation_contacts = ListField(title=_(u'Website'),
-        value_type=DictRow(title=_(u'Website'), schema=IContacts),
+    nameInformation_contacts = ListField(title=_(u'Contacts'),
+        value_type=DictRow(title=_(u'Contacts'), schema=IContacts),
         required=False)
-    form.widget(nameInformation_contacts=DataGridFieldFactory)
+    form.widget(nameInformation_contacts=BlockDataGridFieldFactory)
     dexteritytextindexer.searchable('nameInformation_contacts')
 
     # Miscellaneous
-    nameInformation_miscellaneous_group = ListField(title=_(u'Group'),
-        value_type=DictRow(title=_(u'Group'), schema=IGroup),
-        required=False)
-    form.widget(nameInformation_miscellaneous_group=DataGridFieldFactory)
-    dexteritytextindexer.searchable('nameInformation_miscellaneous_group')
+    nameInformation_miscellaneous_group = schema.List(
+        title=_(u'Group'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('nameInformation_miscellaneous_group', AjaxSelectFieldWidget, vocabulary="collective.personOrInstitution.group")
 
     nameInformation_miscellaneous_notes = ListField(title=_(u'Notes'),
         value_type=DictRow(title=_(u'Notes'), schema=INotes),
@@ -215,11 +225,14 @@ class IPersonOrInstitution(form.Schema):
     dexteritytextindexer.searchable('personDetails_birthDetails_precision')
 
 
-    personDetails_birthDetails_place = schema.TextLine(
+    personDetails_birthDetails_place = schema.List(
         title=_(u'Place'),
-        required=False
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
     )
-    dexteritytextindexer.searchable('personDetails_birthDetails_place')
+    form.widget('personDetails_birthDetails_place', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.place")
 
     personDetails_birthDetails_notes = ListField(title=_(u'Notes'),
         value_type=DictRow(title=_(u'Notes'), schema=INotes),
@@ -246,11 +259,14 @@ class IPersonOrInstitution(form.Schema):
     )
     dexteritytextindexer.searchable('personDetails_birthDetails_precision')
 
-    personDetails_deathDetails_place = schema.TextLine(
+    personDetails_deathDetails_place = schema.List(
         title=_(u'Place'),
-        required=False
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
     )
-    dexteritytextindexer.searchable('personDetails_birthDetails_place')
+    form.widget('personDetails_deathDetails_place', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.place")
 
     personDetails_deathDetails_notes = ListField(title=_(u'Notes'),
         value_type=DictRow(title=_(u'Notes'), schema=INotes),
@@ -265,24 +281,33 @@ class IPersonOrInstitution(form.Schema):
     form.widget(personDetails_nationality_nationality=DataGridFieldFactory)
     dexteritytextindexer.searchable('personDetails_nationality_nationality')
 
-    personDetails_nationality_language = ListField(title=_(u'Language'),
-        value_type=DictRow(title=_(u'Language'), schema=ILanguage),
-        required=False)
-    form.widget(personDetails_nationality_language=DataGridFieldFactory)
-    dexteritytextindexer.searchable('personDetails_nationality_language')
+    personDetails_nationality_language = schema.List(
+        title=_(u'Language'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('personDetails_nationality_language', AjaxSelectFieldWidget, vocabulary="collective.personOrInstitution.language")
 
     # Ocupation
-    personDetails_ocupation_ocupation = ListField(title=_(u'Occupation'),
-        value_type=DictRow(title=_(u'Occupation'), schema=IOcupation),
-        required=False)
-    form.widget(personDetails_ocupation_ocupation=DataGridFieldFactory)
-    dexteritytextindexer.searchable('personDetails_ocupation_ocupation')
+    personDetails_ocupation_ocupation = schema.List(
+        title=_(u'Occupation'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('personDetails_ocupation_ocupation', AjaxSelectFieldWidget, vocabulary="collective.personOrInstitution.ocupation")
 
-    personDetails_ocupation_schoolStyle = ListField(title=_(u'School/style'),
-        value_type=DictRow(title=_(u'School/style'), schema=ISchoolStyle),
-        required=False)
-    form.widget(personDetails_ocupation_schoolStyle=DataGridFieldFactory)
-    dexteritytextindexer.searchable('personDetails_ocupation_schoolStyle')
+    personDetails_ocupation_schoolStyle = schema.List(
+        title=_(u'School/style'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('personDetails_ocupation_schoolStyle', AjaxSelectFieldWidget, vocabulary="collective.object.productionSchoolStyle")
 
     # Place of activity
     personDetails_placeOfActivity = ListField(title=_(u'Place of activity'),
@@ -297,8 +322,6 @@ class IPersonOrInstitution(form.Schema):
         required=False
     )
     dexteritytextindexer.searchable('personDetails_biography')
-
-
 
 
 

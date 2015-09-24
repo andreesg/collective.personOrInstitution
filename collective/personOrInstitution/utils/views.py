@@ -6,14 +6,45 @@ from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
 from collective.personOrInstitution import MessageFactory as _
 from plone.dexterity.browser.view import DefaultView
+from AccessControl import getSecurityManager
+from Products.CMFCore.permissions import ModifyPortalContent
+from plone.app.widgets.dx import AjaxSelectFieldWidget, AjaxSelectWidget, SelectWidget, DatetimeFieldWidget, IAjaxSelectWidget, RelatedItemsFieldWidget
+from zope.interface import alsoProvides
+from .interfaces import IFormWidget
+from plone.dexterity.browser import add, edit
+from collective.z3cform.datagridfield.interfaces import IDataGridField
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
 # # # # # # # # # # # # #
 # View specific methods #
 # # # # # # # # # # # # #
 
-class PersonOrInstitutionView(DefaultView):
+class PersonOrInstitutionView(edit.DefaultEditForm):
     """ View class """
+
+    template = ViewPageTemplateFile('../personOrInstitution_templates/view.pt')
+
+    def update(self):
+        super(PersonOrInstitutionView, self).update()
+        for group in self.groups:
+            for widget in group.widgets.values():
+                if IDataGridField.providedBy(widget):
+                    widget.auto_append = True
+                    widget.allow_reorder = True
+                alsoProvides(widget, IFormWidget)
+
+        for widget in self.widgets.values():
+            if IDataGridField.providedBy(widget) or IAjaxSelectWidget.providedBy(widget):
+                widget.auto_append = True
+                widget.allow_reorder = True
+            alsoProvides(widget, IFormWidget)
+
+    def checkUserPermission(self):
+        sm = getSecurityManager()
+        if sm.checkPermission(ModifyPortalContent, self.context):
+            return True
+        return False
 
     def trim_white_spaces(self, text):
         if text != "" and text != None:

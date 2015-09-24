@@ -7,6 +7,12 @@ from collective.personOrInstitution import MessageFactory as _
 from ..utils.vocabularies import _createPriorityVocabulary, _createInsuranceTypeVocabulary
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 
+from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationList
+from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget
+from collective.object.utils.source import ObjPathSourceBinder
+from plone.directives import dexterity, form
+
 priority_vocabulary = SimpleVocabulary(list(_createPriorityVocabulary()))
 insurance_type_vocabulary = SimpleVocabulary(list(_createInsuranceTypeVocabulary()))
 
@@ -26,23 +32,68 @@ class IFormWidget(Interface):
 # DataGrid interfaces     # 
 # # # # # # # # # # # # # #
 class INameType(Interface):
-    type = schema.TextLine(title=_(u'Name type'), required=False)
+    type = schema.Choice(title=_(u'Name type'), required=True, vocabulary="collective.personOrInstitution.nametype", default="No value")
 
 class IUse(Interface):
-    term = schema.TextLine(title=_(u'Use'), required=False)
+    use = RelationList(
+        title=_(u'Use'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('use', SimpleRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
 class IUsedFor(Interface):
-    term = schema.TextLine(title=_(u'Used for'), required=False)
+    usedFor = RelationList(
+        title=_(u'Used for'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('usedFor', SimpleRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
 class IEquivalent(Interface):
-    name = schema.TextLine(title=_(u'Equivalent'), required=False)
+    name = RelationList(
+        title=_(u'Use'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('name', SimpleRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
 class IAddressDetails(Interface):
     addressType = schema.TextLine(title=_(u'Address type'), required=False)
     address = schema.TextLine(title=_(u'Address'), required=False)
     postalCode = schema.TextLine(title=_(u'Postal code'), required=False)
-    place = schema.TextLine(title=_(u'Place'), required=False)
-    country = schema.TextLine(title=_(u'Country'), required=False)
+    place = schema.List(
+        title=_(u'Place'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('place', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.place")
+
+    country = schema.List(
+        title=_(u'Country'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('country', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.country")
 
 class ITelephone(Interface):
     phone = schema.TextLine(title=_(u'Telephone'), required=False)
@@ -57,7 +108,18 @@ class IWebsite(Interface):
     url = schema.TextLine(title=_(u'Website'), required=False)
 
 class IContacts(Interface):
-    name = schema.TextLine(title=_(u'Name'), required=False)
+    name = RelationList(
+        title=_(u'Name'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('name', SimpleRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
+
     jobTitle = schema.TextLine(title=_(u'Job title'), required=False)
     phone = schema.TextLine(title=_(u'Phone'), required=False)
 
@@ -65,7 +127,7 @@ class IGroup(Interface):
     term = schema.TextLine(title=_(u'Group'), required=False)
 
 class INotes(Interface):
-    note = schema.TextLine(title=_(u'Note'), required=False)
+    note = schema.Text(title=_(u'Note'), required=False)
 
 ## Person details
 
@@ -82,7 +144,14 @@ class ISchoolStyle(Interface):
     term = schema.TextLine(title=_(u'School/style'), required=False)
 
 class IPlaceOfActivity(Interface):
-    place = schema.TextLine(title=_(u'Place'), required=False)
+    place = schema.List(
+        title=_(u'Place'),
+        required=False,
+        value_type=schema.TextLine(),
+        missing_value=[],
+        default=[]
+    )
+    form.widget('place', AjaxSingleSelectFieldWidget, vocabulary="collective.personOrInstitution.place")
     dateStart = schema.TextLine(title=_(u'Date (start)'), required=False)
     dateEnd = schema.TextLine(title=_(u'Date (end)'), required=False)
     notes = schema.TextLine(title=_(u'Notes'), required=False)
