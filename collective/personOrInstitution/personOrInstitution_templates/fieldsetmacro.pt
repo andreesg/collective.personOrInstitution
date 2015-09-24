@@ -208,7 +208,7 @@
         <h2 class="page-header" i18n:translate="Biography"></h2>
 
         <div class="form-horizontal gridfield">
-          <tal:widget tal:replace="structure widgets/personDetails_biography/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/personDetails_biographies/@@ploneform-render-widget"/>
         </div>        
     </div>
   </tal:person_details>

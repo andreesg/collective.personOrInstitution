@@ -202,7 +202,7 @@ class IPersonOrInstitution(form.Schema):
                 'personDetails_deathDetails_place', 'personDetails_deathDetails_notes',
                 'personDetails_nationality_nationality', 'personDetails_nationality_language',
                 'personDetails_ocupation_ocupation', 'personDetails_ocupation_schoolStyle',
-                'personDetails_placeOfActivity', 'personDetails_biography']
+                'personDetails_placeOfActivity', 'personDetails_biographies']
     )
 
     # Birth details
@@ -317,11 +317,11 @@ class IPersonOrInstitution(form.Schema):
     dexteritytextindexer.searchable('personDetails_placeOfActivity')
 
     # Biography
-    personDetails_biography = ListField(title=_(u'Biography'),
+    personDetails_biographies = ListField(title=_(u'Biography'),
         value_type=DictRow(title=_(u'Biography'), schema=IBiography),
         required=False)
-    form.widget(personDetails_biography=BlockDataGridFieldFactory)
-    dexteritytextindexer.searchable('personDetails_biography')
+    form.widget(personDetails_biographies=BlockDataGridFieldFactory)
+    dexteritytextindexer.searchable('personDetails_biographies')
 
 
 
