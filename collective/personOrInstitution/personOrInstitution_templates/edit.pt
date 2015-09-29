@@ -89,23 +89,6 @@
                           tal:define="show_default_label show_default_label|nothing;
                                       has_groups has_groups|nothing">
 
-                          <fieldset id="fieldset-default" tal:omit-tag="not:show_default_label">
-
-                              <legend tal:condition="show_default_label"
-                                      tal:attributes="id string:fieldsetlegend-default"
-                                      tal:content="default_fieldset_label">Form name</legend>
-
-                              <metal:define define-macro="widget_rendering">
-                                  <tal:widgets repeat="widget view/widgets/values">
-                                      <metal:field-slot define-slot="field">
-                                          <metal:field define-macro="field">
-                                              <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
-                                          </metal:field>
-                                      </metal:field-slot>
-                                  </tal:widgets>
-                              </metal:define>
-                          </fieldset>
-
                           <tal:block tal:repeat="group groups" condition="has_groups">
                             <fieldset
                                 tal:define="normalizeString nocall:context/@@plone/normalizeString;

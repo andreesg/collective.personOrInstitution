@@ -84,6 +84,12 @@
       permission="zope.Public"
     />
 
+  <adapter for=".personOrInstitution.IPersonOrInstitution"
+    provides=".personOrInstitution.INameFromPersonNames"
+    factory=".personOrInstitution.NameFromPersonNames"
+    />
+
+
   <!-- -*- extra stuff goes here -*- -->
   <adapter name="nameInformation_addressDetails_place" factory=".utils.indexers.nameInformation_addressDetails_place" />
   <adapter name="nameInformation_addressDetails_country" factory=".utils.indexers.nameInformation_addressDetails_country" />

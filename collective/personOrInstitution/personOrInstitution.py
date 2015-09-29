@@ -58,11 +58,27 @@ from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxS
 from collective.object.utils.source import ObjPathSourceBinder
 from plone.directives import dexterity, form
 
+
 # # # # # # # # # # # # #
 # # # # # # # # # # # # #
 # # PersonOrInstitution schema  # #
 # # # # # # # # # # # # #
 # # # # # # # # # # # # #
+
+from plone.app.content.interfaces import INameFromTitle
+class INameFromPersonNames(INameFromTitle):
+    def title():
+        """Return a processed title"""
+
+class NameFromPersonNames(object):
+    implements(INameFromPersonNames)
+    
+    def __init__(self, context):
+        self.context = context
+
+    @property
+    def title(self):
+        return self.context.nameInformation_name_name
 
 class IPersonOrInstitution(form.Schema):
 
@@ -94,7 +110,7 @@ class IPersonOrInstitution(form.Schema):
 
     nameInformation_name_name = schema.TextLine(
         title=_(u'Name'),
-        required=False
+        required=True
     )
     dexteritytextindexer.searchable('nameInformation_name_name')
 
@@ -257,7 +273,7 @@ class IPersonOrInstitution(form.Schema):
         title=_(u'Precision'),
         required=False
     )
-    dexteritytextindexer.searchable('personDetails_birthDetails_precision')
+    dexteritytextindexer.searchable('personDetails_deathDetails_precision')
 
     personDetails_deathDetails_place = schema.List(
         title=_(u'Place'),
