@@ -51,3 +51,4 @@ CountryVocabularyFactory = ObjectVocabulary('nameInformation_addressDetails_coun
 GroupVocabularyFactory = ObjectVocabulary('nameInformation_miscellaneous_group')
 LanguageVocabularyFactory = ObjectVocabulary('personDetails_nationality_language')
 OcupationVocabularyFactory = ObjectVocabulary('personDetails_ocupation_ocupation')
+SchoolStyleVocabularyFactory = ObjectVocabulary('personDetails_ocupation_schoolStyle')

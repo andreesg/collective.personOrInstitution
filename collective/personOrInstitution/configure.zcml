@@ -89,7 +89,6 @@
     factory=".personOrInstitution.NameFromPersonNames"
     />
 
-
   <!-- -*- extra stuff goes here -*- -->
   <adapter name="nameInformation_addressDetails_place" factory=".utils.indexers.nameInformation_addressDetails_place" />
   <adapter name="nameInformation_addressDetails_country" factory=".utils.indexers.nameInformation_addressDetails_country" />
@@ -122,6 +121,11 @@
   <utility
     component=".utils.vocabularies.OcupationVocabularyFactory"
     name="collective.personOrInstitution.ocupation"
+    />
+
+  <utility
+    component=".utils.vocabularies.SchoolStyleVocabularyFactory"
+    name="collective.personOrInstitution.schoolStyle"
     />
 
 

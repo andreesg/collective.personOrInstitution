@@ -323,7 +323,7 @@ class IPersonOrInstitution(form.Schema):
         missing_value=[],
         default=[]
     )
-    form.widget('personDetails_ocupation_schoolStyle', AjaxSelectFieldWidget, vocabulary="collective.object.productionSchoolStyle")
+    form.widget('personDetails_ocupation_schoolStyle', AjaxSelectFieldWidget, vocabulary="collective.personOrInstitution.schoolStyle")
 
     # Place of activity
     personDetails_placeOfActivity = ListField(title=_(u'Place of activity'),
