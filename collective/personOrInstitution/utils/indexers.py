@@ -59,3 +59,22 @@ def nameInformation_addressDetails_country(object, **kw):
             return []
     except:
         return []
+
+@indexer(IPersonOrInstitution)
+def nameInformation_name_nameType_type(object, **kw):
+    try:
+        if hasattr(object, 'nameInformation_name_nameType'):
+            terms = []
+            items = object.nameInformation_name_nameType
+            if items:
+                for item in items:
+                    if item['type']:
+                        terms.append(item['type'])
+
+            return terms
+        else:
+            return []
+    except:
+        return []
+
+

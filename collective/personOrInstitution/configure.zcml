@@ -34,11 +34,13 @@
       />
     
   <browser:page
-        name="view"
+        name="contents_view"
         for="collective.personOrInstitution.personOrInstitution.IPersonOrInstitution"
         class="collective.personOrInstitution.personOrInstitution.PersonOrInstitutionView"
         template="personOrInstitution_templates/view.pt"
         permission="zope2.View"
+        title="View Content"
+        menu="plone_displayviews"
         />
 
 
@@ -92,6 +94,7 @@
   <!-- -*- extra stuff goes here -*- -->
   <adapter name="nameInformation_addressDetails_place" factory=".utils.indexers.nameInformation_addressDetails_place" />
   <adapter name="nameInformation_addressDetails_country" factory=".utils.indexers.nameInformation_addressDetails_country" />
+  <adapter name="nameInformation_name_nameType_type" factory=".utils.indexers.nameInformation_name_nameType_type" />
 
   <utility
     component=".utils.vocabularies.NameTypeVocabularyFactory"
