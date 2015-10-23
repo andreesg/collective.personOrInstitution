@@ -32,7 +32,7 @@ class IFormWidget(Interface):
 # DataGrid interfaces     # 
 # # # # # # # # # # # # # #
 class INameType(Interface):
-    type = schema.Choice(title=_(u'Name type'), required=True, vocabulary="collective.personOrInstitution.nametype", default="No value")
+    type = schema.Choice(title=_(u'Name type'), required=True, vocabulary="collective.personOrInstitution.nametype", default="No value",  missing_value=" ")
 
 class IUse(Interface):
     use = RelationList(
