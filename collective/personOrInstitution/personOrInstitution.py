@@ -78,7 +78,7 @@ class NameFromPersonNames(object):
 
     @property
     def title(self):
-        self.context.setTitle(nameInformation_name_name)
+        self.context.setTitle(self.context.nameInformation_name_name)
         return self.context.nameInformation_name_name
 
 class IPersonOrInstitution(form.Schema):

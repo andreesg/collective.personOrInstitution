@@ -3,6 +3,7 @@
 <div metal:define-macro="private_view">
 <tal:name_information tal:condition='python: fieldset_text == "name_information"'
     tal:define='widgets group/widgets'>
+
     <!-- Name information -->
     <div class="row no-padding">
         <h2 class="page-header" i18n:translate="Naam">Naam</h2>
@@ -78,6 +79,7 @@
 
   <tal:name_information tal:condition='python: fieldset_text == "name_information"'
     tal:define='widgets group/widgets'>
+    
     <!-- Name information -->
     <div class="row no-padding">
         <h2 class="page-header" i18n:translate="">Name</h2>
