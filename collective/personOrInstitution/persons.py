@@ -65,24 +65,8 @@ from plone.directives import dexterity, form
 # # # # # # # # # # # # #
 # # # # # # # # # # # # #
 
-from plone.app.content.interfaces import INameFromTitle
-class INameFromPersonNames(INameFromTitle):
-    def title():
-        """Return a processed title"""
-
-class NameFromPersonNames(object):
-    implements(INameFromPersonNames)
-    
-    def __init__(self, context):
-        self.context = context
-
-    @property
-    def title(self):
-        return self.context.title
-
 class IPersonOrInstitution(form.Schema):
 
-    
     # priref
     priref = schema.TextLine(
         title=_(u'priref'),
@@ -95,7 +79,7 @@ class IPersonOrInstitution(form.Schema):
     # Name Information    #
     # # # # # # # # # # # #
     model.fieldset('name_information', label=_(u'Name information'), 
-        fields=['title', 'nameInformation_name_institutionNumber',
+        fields=['nameInformation_name_name', 'nameInformation_name_institutionNumber',
                 'nameInformation_name_nameType', 'nameInformation_name_nameNotes',
                 'nameInformation_relationWithOtherNames_use', 'nameInformation_relationWithOtherNames_usedFor',
                 'nameInformation_relationWithOtherNames_equivalent', 'nameInformation_addressDetails',
@@ -104,11 +88,11 @@ class IPersonOrInstitution(form.Schema):
                 'nameInformation_contacts', 'nameInformation_miscellaneous_group', 'nameInformation_miscellaneous_notes']
     )
 
-    title = schema.TextLine(
+    nameInformation_name_name = schema.TextLine(
         title=_(u'Name'),
         required=True
     )
-    dexteritytextindexer.searchable('title')
+    dexteritytextindexer.searchable('nameInformation_name_name')
 
     nameInformation_name_institutionNumber = schema.TextLine(
         title=_(u'Institution number'),

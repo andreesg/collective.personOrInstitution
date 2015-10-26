@@ -9,7 +9,7 @@
         <h2 class="page-header" i18n:translate="Naam">Naam</h2>
 
         <div class="form-horizontal">
-          <tal:widget tal:replace="structure widgets/nameInformation_name_name/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/title/@@ploneform-render-widget"/>
           <tal:widget tal:replace="structure widgets/nameInformation_name_institutionNumber/@@ploneform-render-widget"/>
         </div>
 
@@ -87,7 +87,7 @@
         <tal:widget tal:replace="structure view/widgets/priref/@@ploneform-render-widget"/>
 
         <div class="form-horizontal">
-          <tal:widget tal:replace="structure widgets/nameInformation_name_name/@@ploneform-render-widget"/>
+          <tal:widget tal:replace="structure widgets/title/@@ploneform-render-widget"/>
           <tal:widget tal:replace="structure widgets/nameInformation_name_institutionNumber/@@ploneform-render-widget"/>
         </div>
 
