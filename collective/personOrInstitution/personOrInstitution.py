@@ -54,7 +54,7 @@ from .utils.views import *
 
 from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
-from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget
+from collective.object.utils.widgets import SimpleRelatedItemsFieldWidget, AjaxSingleSelectFieldWidget, ExtendedRelatedItemsFieldWidget
 from collective.object.utils.source import ObjPathSourceBinder
 from plone.directives import dexterity, form
 
@@ -97,8 +97,8 @@ class IPersonOrInstitution(form.Schema):
     model.fieldset('name_information', label=_(u'Name information'), 
         fields=['title', 'nameInformation_name_institutionNumber',
                 'nameInformation_name_nameType', 'nameInformation_name_nameNotes',
-                'nameInformation_relationWithOtherNames_use', 'nameInformation_relationWithOtherNames_usedFor',
-                'nameInformation_relationWithOtherNames_equivalent', 'nameInformation_addressDetails',
+                'nameInformation_relationWithOtherNames_uses', 'nameInformation_relationWithOtherNames_usedfor',
+                'nameInformation_relationWithOtherNames_equivalents', 'nameInformation_addressDetails',
                 'nameInformation_telephoneFaxEmail_telephone', 'nameInformation_telephoneFaxEmail_fax',
                 'nameInformation_telephoneFaxEmail_email', 'nameInformation_telephoneFaxEmail_website',
                 'nameInformation_contacts', 'nameInformation_miscellaneous_group', 'nameInformation_miscellaneous_notes']
@@ -129,23 +129,42 @@ class IPersonOrInstitution(form.Schema):
     dexteritytextindexer.searchable('nameInformation_name_nameNotes')
 
     # Relation with other names
-    nameInformation_relationWithOtherNames_use = ListField(title=_(u'Use'),
-        value_type=DictRow(title=_(u'Use'), schema=IUse),
-        required=False)
-    form.widget(nameInformation_relationWithOtherNames_use=BlockDataGridFieldFactory)
-    dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_use')
+    nameInformation_relationWithOtherNames_uses = RelationList(
+        title=_(u'Use'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('nameInformation_relationWithOtherNames_uses', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
-    nameInformation_relationWithOtherNames_usedFor = ListField(title=_(u'Used for'),
-        value_type=DictRow(title=_(u'Used for'), schema=IUsedFor),
-        required=False)
-    form.widget(nameInformation_relationWithOtherNames_usedFor=BlockDataGridFieldFactory)
-    dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_usedFor')
+    nameInformation_relationWithOtherNames_usedfor = RelationList(
+        title=_(u'Used for'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('nameInformation_relationWithOtherNames_usedfor', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
-    nameInformation_relationWithOtherNames_equivalent = ListField(title=_(u'Equivalent'),
-        value_type=DictRow(title=_(u'Equivalent'), schema=IEquivalent),
-        required=False)
-    form.widget(nameInformation_relationWithOtherNames_equivalent=BlockDataGridFieldFactory)
-    dexteritytextindexer.searchable('nameInformation_relationWithOtherNames_equivalent')
+
+    nameInformation_relationWithOtherNames_equivalents = RelationList(
+        title=_(u'Equivalent'),
+        default=[],
+        missing_value=[],
+        value_type=RelationChoice(
+            title=u"Related",
+            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+        ),
+        required=False
+    )
+    form.widget('nameInformation_relationWithOtherNames_equivalents', ExtendedRelatedItemsFieldWidget, vocabulary='collective.object.relateditems')
 
     # Address details
     nameInformation_addressDetails = ListField(title=_(u'Address details'),
