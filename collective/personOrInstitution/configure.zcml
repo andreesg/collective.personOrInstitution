@@ -43,6 +43,11 @@
         menu="plone_displayviews"
         />
 
+  <subscriber
+        for=".personOrInstitution.IPersonOrInstitution
+        zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".utils.events.personModifiedEvent" />
+
 
   <!-- Custom Edit form -->
   <browser:page
