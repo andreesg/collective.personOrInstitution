@@ -110,6 +110,11 @@ class IPersonOrInstitution(form.Schema):
     )
     dexteritytextindexer.searchable('title')
 
+    person_name = schema.TextLine(
+        title=_(u'Name'),
+        required=True
+    )
+
     nameInformation_name_institutionNumber = schema.TextLine(
         title=_(u'Institution number'),
         required=False
