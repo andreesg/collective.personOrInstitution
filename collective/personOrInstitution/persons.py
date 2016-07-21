@@ -42,7 +42,7 @@ from collective import dexteritytextindexer
 from plone.dexterity.browser.view import DefaultView
 from plone.dexterity.content import Container
 from plone.dexterity.browser import add, edit
-from plone.app.widgets.dx import AjaxSelectFieldWidget
+from plone.app.z3cform.widget import AjaxSelectFieldWidget
 
 # # # # # # # # # # # # # # # # # #
 # !PersonOrInstitution specific imports!   #

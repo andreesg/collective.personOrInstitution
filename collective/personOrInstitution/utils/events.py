@@ -34,7 +34,7 @@ def move_person(obj):
         pass
 
 def personModifiedEvent(object, event):
-    move_person(object)
+    #move_person(object)
     return True
     
 
