@@ -75,13 +75,13 @@
   </class>
 
   <!-- Custom plone form widget -->
-  <browser:page
+  <!--<browser:page
     name="ploneform-render-widget"
     for=".personOrInstitution.IFormWidget"
     class="plone.app.z3cform.templates.RenderWidget"
     permission="zope.Public"
     template="personOrInstitution_templates/widget.pt"
-  />
+  />-->
 
   <!-- Custom Add and Edit form macro -->
   <browser:page

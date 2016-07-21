@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from collective.leadmedia.adapters import ICanContainMedia
+#from collective.leadmedia.adapters import ICanContainMedia
 from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
 from collective.personOrInstitution import MessageFactory as _
