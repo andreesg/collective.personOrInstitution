@@ -134,7 +134,7 @@ class IPersonOrInstitution(form.Schema):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
@@ -146,7 +146,7 @@ class IPersonOrInstitution(form.Schema):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
@@ -159,7 +159,7 @@ class IPersonOrInstitution(form.Schema):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )

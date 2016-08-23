@@ -41,7 +41,7 @@ class IUse(Interface):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
@@ -54,7 +54,7 @@ class IUsedFor(Interface):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
@@ -67,7 +67,7 @@ class IEquivalent(Interface):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
@@ -118,7 +118,7 @@ class IContacts(Interface):
         missing_value=[],
         value_type=RelationChoice(
             title=u"Related",
-            source=ObjPathSourceBinder(portal_type='PersonOrInstitution')
+            vocabulary='collective.object.relateditems'
         ),
         required=False
     )
